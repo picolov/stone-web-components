@@ -1,0 +1,9 @@
+:host {
+  --stone-grid-child-count: 0;
+  --stone-grid-template-columns: repeat(var(--stone-grid-child-count), 1fr);
+  --stone-grid-template-rows: repeat(var(--stone-grid-child-count), 1fr);
+  display: grid;
+  grid-template-columns: var(--stone-grid-template-columns);
+  grid-template-rows: var(--stone-grid-template-rows);
+  min-height: 10px;
+}

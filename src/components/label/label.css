@@ -1,0 +1,6 @@
+:host {
+  --stone-label-color: black;
+  display: inline;
+  min-height: 10px;
+  color: var(--stone-label-color);
+}
