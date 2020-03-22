@@ -1,7 +1,9 @@
 {
   "name": "stone-web-components",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Stone Web Component Collection",
+  "author": "Picolov <picolov@gmail.com> (http://picolov.com)",
+  "homepage": "https://github.com/picolov/stone-web-components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
