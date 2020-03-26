@@ -1,9 +1,23 @@
 :host {
   --stone-grid-child-count: 0;
-  --stone-grid-template-columns: repeat(var(--stone-grid-child-count), 1fr);
-  --stone-grid-template-rows: repeat(var(--stone-grid-child-count), 1fr);
+  --stone-grid-template-columns: "";
+  --stone-grid-template-rows: "";
+  --stone-grid-template-areas: "";
+  --stone-grid-columns-gap: 0;
+  --stone-grid-rows-gap: 0;
+  --stone-grid-horizontal-items-alignment: start;
+  --stone-grid-vertical-items-alignment: start;
+  --stone-grid-horizontal-content-alignment: start;
+  --stone-grid-vertical-content-alignment: start;
   display: grid;
   grid-template-columns: var(--stone-grid-template-columns);
   grid-template-rows: var(--stone-grid-template-rows);
+  grid-template-areas: var(--stone-grid-template-areas);
+  grid-column-gap: var(--stone-grid-columns-gap);
+  grid-row-gap: var(--stone-grid-rows-gap);
+  justify-items: var(--stone-grid-horizontal-items-alignment);
+  align-items: var(--stone-grid-vertical-items-alignment);
+  justify-content: var(--stone-grid-horizontal-content-alignment);
+  align-content: var(--stone-grid-vertical-content-alignment);
   min-height: 10px;
 }

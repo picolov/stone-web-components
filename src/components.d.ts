@@ -12,11 +12,25 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface StoneGrid {
     'cols': number;
+    'colsGap': string;
+    'horizontalContentAlign': string;
+    'horizontalItemsAlign': string;
     'inline': boolean;
     'rows': number;
+    'rowsGap': string;
     'stack': boolean;
+    'templateAreas': string;
     'templateCols': string;
     'templateRows': string;
+    'verticalContentAlign': string;
+    'verticalItemsAlign': string;
+  }
+  interface StoneGridCell {
+    'area': string;
+    'col': string;
+    'horizontalAlign': string;
+    'row': string;
+    'verticalAlign': string;
   }
   interface StoneInline {}
   interface StoneLabel {
@@ -32,6 +46,12 @@ declare global {
   var HTMLStoneGridElement: {
     prototype: HTMLStoneGridElement;
     new (): HTMLStoneGridElement;
+  };
+
+  interface HTMLStoneGridCellElement extends Components.StoneGridCell, HTMLStencilElement {}
+  var HTMLStoneGridCellElement: {
+    prototype: HTMLStoneGridCellElement;
+    new (): HTMLStoneGridCellElement;
   };
 
   interface HTMLStoneInlineElement extends Components.StoneInline, HTMLStencilElement {}
@@ -53,6 +73,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'stone-grid': HTMLStoneGridElement;
+    'stone-grid-cell': HTMLStoneGridCellElement;
     'stone-inline': HTMLStoneInlineElement;
     'stone-label': HTMLStoneLabelElement;
     'stone-stack': HTMLStoneStackElement;
@@ -62,11 +83,25 @@ declare global {
 declare namespace LocalJSX {
   interface StoneGrid {
     'cols'?: number;
+    'colsGap'?: string;
+    'horizontalContentAlign'?: string;
+    'horizontalItemsAlign'?: string;
     'inline'?: boolean;
     'rows'?: number;
+    'rowsGap'?: string;
     'stack'?: boolean;
+    'templateAreas'?: string;
     'templateCols'?: string;
     'templateRows'?: string;
+    'verticalContentAlign'?: string;
+    'verticalItemsAlign'?: string;
+  }
+  interface StoneGridCell {
+    'area'?: string;
+    'col'?: string;
+    'horizontalAlign'?: string;
+    'row'?: string;
+    'verticalAlign'?: string;
   }
   interface StoneInline {}
   interface StoneLabel {
@@ -76,6 +111,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'stone-grid': StoneGrid;
+    'stone-grid-cell': StoneGridCell;
     'stone-inline': StoneInline;
     'stone-label': StoneLabel;
     'stone-stack': StoneStack;
@@ -89,6 +125,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'stone-grid': LocalJSX.StoneGrid & JSXBase.HTMLAttributes<HTMLStoneGridElement>;
+      'stone-grid-cell': LocalJSX.StoneGridCell & JSXBase.HTMLAttributes<HTMLStoneGridCellElement>;
       'stone-inline': LocalJSX.StoneInline & JSXBase.HTMLAttributes<HTMLStoneInlineElement>;
       'stone-label': LocalJSX.StoneLabel & JSXBase.HTMLAttributes<HTMLStoneLabelElement>;
       'stone-stack': LocalJSX.StoneStack & JSXBase.HTMLAttributes<HTMLStoneStackElement>;

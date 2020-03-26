@@ -1,0 +1,16 @@
+:host {
+  --stone-grid-cell-col: "";
+  --stone-grid-cell-row: "";
+  --stone-grid-cell-area: "";
+  --stone-grid-cell-horizontal-alignment: "";
+  --stone-grid-cell-vertical-alignment: "";
+  grid-column: var(--stone-grid-cell-col);
+  grid-row: var(--stone-grid-cell-row);
+  grid-area: var(--stone-grid-cell-area);
+  justify-self: var(--stone-grid-cell-horizontal-alignment);
+  align-self: var(--stone-grid-cell-vertical-alignment);
+}
+
+:host(.grid-cell-hidden) {
+  display: none;
+}
