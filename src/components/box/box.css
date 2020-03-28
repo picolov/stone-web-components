@@ -1,0 +1,32 @@
+:host {
+  --stone-box-margin-top: "";
+  --stone-box-margin-right: "";
+  --stone-box-margin-bottom: "";
+  --stone-box-margin-left: "";
+  --stone-box-border-top: "";
+  --stone-box-border-right: "";
+  --stone-box-border-bottom: "";
+  --stone-box-border-left: "";
+  --stone-box-border-radius: "";
+  --stone-box-padding-top: "";
+  --stone-box-padding-right: "";
+  --stone-box-padding-bottom: "";
+  --stone-box-padding-left: "";
+  display: block;
+
+  margin-top: var(--stone-box-margin-top);
+  margin-right: var(--stone-box-margin-right);
+  margin-bottom: var(--stone-box-margin-bottom);
+  margin-left: var(--stone-box-margin-left);
+
+  border-top: var(--stone-box-border-top);
+  border-right: var(--stone-box-border-right);
+  border-bottom: var(--stone-box-border-bottom);
+  border-left: var(--stone-box-border-left);
+  border-radius: var(--stone-box-border-radius);
+
+  padding-top: var(--stone-box-padding-top);
+  padding-right: var(--stone-box-padding-right);
+  padding-bottom: var(--stone-box-padding-bottom);
+  padding-left: var(--stone-box-padding-left);
+}

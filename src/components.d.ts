@@ -10,6 +10,24 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface StoneBox {
+    'borderAll': string;
+    'borderBottom': string;
+    'borderLeft': string;
+    'borderRadius': string;
+    'borderRight': string;
+    'borderTop': string;
+    'marginAll': string;
+    'marginBottom': string;
+    'marginLeft': string;
+    'marginRight': string;
+    'marginTop': string;
+    'paddingAll': string;
+    'paddingBottom': string;
+    'paddingLeft': string;
+    'paddingRight': string;
+    'paddingTop': string;
+  }
   interface StoneGrid {
     'cols': number;
     'colsGap': string;
@@ -42,6 +60,12 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLStoneBoxElement extends Components.StoneBox, HTMLStencilElement {}
+  var HTMLStoneBoxElement: {
+    prototype: HTMLStoneBoxElement;
+    new (): HTMLStoneBoxElement;
+  };
+
   interface HTMLStoneGridElement extends Components.StoneGrid, HTMLStencilElement {}
   var HTMLStoneGridElement: {
     prototype: HTMLStoneGridElement;
@@ -72,6 +96,7 @@ declare global {
     new (): HTMLStoneStackElement;
   };
   interface HTMLElementTagNameMap {
+    'stone-box': HTMLStoneBoxElement;
     'stone-grid': HTMLStoneGridElement;
     'stone-grid-cell': HTMLStoneGridCellElement;
     'stone-inline': HTMLStoneInlineElement;
@@ -81,6 +106,24 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface StoneBox {
+    'borderAll'?: string;
+    'borderBottom'?: string;
+    'borderLeft'?: string;
+    'borderRadius'?: string;
+    'borderRight'?: string;
+    'borderTop'?: string;
+    'marginAll'?: string;
+    'marginBottom'?: string;
+    'marginLeft'?: string;
+    'marginRight'?: string;
+    'marginTop'?: string;
+    'paddingAll'?: string;
+    'paddingBottom'?: string;
+    'paddingLeft'?: string;
+    'paddingRight'?: string;
+    'paddingTop'?: string;
+  }
   interface StoneGrid {
     'cols'?: number;
     'colsGap'?: string;
@@ -110,6 +153,7 @@ declare namespace LocalJSX {
   interface StoneStack {}
 
   interface IntrinsicElements {
+    'stone-box': StoneBox;
     'stone-grid': StoneGrid;
     'stone-grid-cell': StoneGridCell;
     'stone-inline': StoneInline;
@@ -124,6 +168,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'stone-box': LocalJSX.StoneBox & JSXBase.HTMLAttributes<HTMLStoneBoxElement>;
       'stone-grid': LocalJSX.StoneGrid & JSXBase.HTMLAttributes<HTMLStoneGridElement>;
       'stone-grid-cell': LocalJSX.StoneGridCell & JSXBase.HTMLAttributes<HTMLStoneGridCellElement>;
       'stone-inline': LocalJSX.StoneInline & JSXBase.HTMLAttributes<HTMLStoneInlineElement>;

@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stone Web Components Collection</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-  <title>Stone Web Components Collection</title>
+    <script type="module" src="/build/stone-web-components.esm.js"></script>
+    <script nomodule src="/build/stone-web-components.js"></script>
+  </head>
 
-  <script type="module" src="/build/stone-web-components.esm.js"></script>
-  <script nomodule src="/build/stone-web-components.js"></script>
-</head>
-
-<body>
-  <stone-grid template-areas="'cell1 . cell2 ' '. cell0 .' 'cell4 cell5 cell6'" horizontal-content-align="center">
-    <stone-grid-cell area="cell0">
-      <stone-label color="red">Label 1</stone-label>
-      <stone-label color="green">Label 2</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell1">
-      <stone-label color="blue">Label 3</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell2">
-      <stone-label color="red">Label 4</stone-label>
-      <stone-label color="green">Label 5</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell3">
-      <stone-label color="blue">Label 6</stone-label>
-      <stone-label color="red">Label 7</stone-label>
-      <stone-label color="green">Label 8</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell4">
-      <stone-label color="blue">Label 9</stone-label>
-      <stone-label color="red">Label 11</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell5">
-      <stone-label color="green">Label 12</stone-label>
-      <stone-label color="blue">Label 13</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell6">
-      <stone-label color="red">Label 14</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell7">
-      <stone-label color="green">Label 15</stone-label>
-      <stone-label color="blue">Label 16</stone-label>
-      <stone-label color="red">Label 17</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell8">
-      <stone-label color="green">Label 18</stone-label>
-    </stone-grid-cell>
-    <stone-grid-cell area="cell9">
-      <stone-label color="blue">Label 19</stone-label>
-    </stone-grid-cell>
-  </stone-grid>
-</body>
-
+  <body>
+    <stone-box
+      margin-all="200px"
+      border-top="dashed thin red"
+      border-right="solid 1px green"
+    >
+      <stone-grid
+        template-areas="'cell1 . cell2 ' '. cell0 .' 'cell4 cell5 cell6'"
+        horizontal-content-align="center"
+      >
+        <stone-grid-cell area="cell0">
+          <stone-label color="red">Label 1</stone-label>
+          <stone-label color="green">Label 2</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell1">
+          <stone-label color="blue">Label 3</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell2">
+          <stone-label color="red">Label 4</stone-label>
+          <stone-label color="green">Label 5</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell3">
+          <stone-label color="blue">Label 6</stone-label>
+          <stone-label color="red">Label 7</stone-label>
+          <stone-label color="green">Label 8</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell4">
+          <stone-label color="blue">Label 9</stone-label>
+          <stone-label color="red">Label 11</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell5">
+          <stone-label color="green">Label 12</stone-label>
+          <stone-label color="blue">Label 13</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell6">
+          <stone-label color="red">Label 14</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell7">
+          <stone-label color="green">Label 15</stone-label>
+          <stone-label color="blue">Label 16</stone-label>
+          <stone-label color="red">Label 17</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell8">
+          <stone-label color="green">Label 18</stone-label>
+        </stone-grid-cell>
+        <stone-grid-cell area="cell9">
+          <stone-label color="blue">Label 19</stone-label>
+        </stone-grid-cell>
+      </stone-grid>
+    </stone-box>
+  </body>
 </html>
