@@ -26,7 +26,7 @@ export class GridCell {
       const gridAreas = gridTemplateAreas.replace(/['".]/gi, "").split(" ");
       let areaNotExist = true;
       for (let i = 0; i < gridAreas.length; i++) {
-        if (gridAreas[i] === this.area) {
+        if (gridAreas[i].trim() === this.area) {
           areaNotExist = false;
           break;
         }
